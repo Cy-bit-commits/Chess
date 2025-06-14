@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#Win {
+    position: absolute;
+    font-size: 2.5rem;
+    font-weight: bold;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    
+    
+}
+.chessBoard{
+    width: 80vw;
+    height: 80vw;
+    margin: auto 0;
+    display:flex;
+    flex-wrap:wrap;
+    border: 2px solid #000;
+}
+.square{
+    width:12.5%;
+    float:left;
+    height:12.5%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+}
+
+.white{
+    background-color: whitesmoke;
+}
+.black{
+    background-color: rgb(103, 157, 103);
+}
+.coordinate{
+    height:auto;
+    display:flex;
+    bottom:4%;
+    left: 4%;
+    position: absolute;
+    font-size: 12px;
+    font-weight:bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.rank{
+    top:4%;
+    right: 4%;
+    left:auto;
+}
+.whiteText{
+    color: #ffffff;
+}
+.blackText{
+    color: #000000;
+}
+.piece{
+    width:100%;
+    z-index: 1;
+    cursor: pointer
+}
+.piece img{
+    width: 100%;
+    height: 100%;
+    height:auto;
+}
+@media (min-width:600px){
+    .chessBoard{
+        width: 600px;
+        height: 600px;
+    }
+}
+@media (max-width:600px){
+    .coordinate{
+        font-size: 8px;
+    }
+}
